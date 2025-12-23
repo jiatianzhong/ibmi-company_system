@@ -35,7 +35,7 @@ End-DS;
 Dcl-DS FILEINFO;
   FUNKEY         Char(1)    Pos(369);
 End-DS;
-
+  
       //---------------------------------------------------------------*
       //
 Dcl-S Index Int(5);
