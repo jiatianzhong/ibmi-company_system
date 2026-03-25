@@ -15,6 +15,11 @@ dcl-proc setupMockTable;
 
   dcl-s cmd varchar(5000);
 
+  cmd = 'DLTOBJ OBJ(QTEMP/' + table +
+          ') OBJTYPE(*FILE)';
+  exec sql
+    call qsys2.qcmdexc(:cmd);
+
   cmd = 'CRTDUPOBJ OBJ(' + table +
           ') FROMLIB(*LIBL) OBJTYPE(*FILE) TOLIB(QTEMP) NEWOBJ(' + table + ')';
   exec sql
